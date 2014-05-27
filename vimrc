@@ -12,7 +12,7 @@ if filereadable(vimfiles_dir."autoload/pathogen.vim")
     call pathogen#infect()
 endif
 filetype plugin indent on
-filetype plugin on
+" filetype plugin on
 
 set modeline
 set modelines=3
@@ -314,7 +314,7 @@ augroup END
 " abbreviate for Python pdb
 abb pdb; import pdb; pdb.set_trace()
 
-
+" easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Bi-directional find motion
