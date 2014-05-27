@@ -314,13 +314,13 @@ augroup END
 " abbreviate for Python pdb
 abb pdb; import pdb; pdb.set_trace()
 
-" easymotion
+"
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Bi-directional find motion
 " " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " " `s{char}{label}`
-nmap <Leader>s <Plug>(easymotion-s)
+nmap <Leader>e <Plug>(easymotion-s)
 " " or
 " " `s{char}{char}{label}`
 " " Need one more keystroke, but on average, it may be more comfortable.
