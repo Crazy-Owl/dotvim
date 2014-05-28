@@ -332,3 +332,9 @@ let g:EasyMotion_smartcase = 1
 " " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)"
+
+" syntastic python
+let g:syntastic_python_checkers=['flake8', 'python']
+let g:syntastic_python_flake8_args='--ignore=E211,E261,E501,E302,E251,E262,E221,E265,E128,F403,E124'
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs=1
