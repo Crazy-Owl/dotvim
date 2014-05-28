@@ -19,3 +19,6 @@
 [submodule "bundle/sql_iabbr-vim"]
 	path = bundle/sql_iabbr-vim
 	url = https://github.com/vim-scripts/sql_iabbr.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
