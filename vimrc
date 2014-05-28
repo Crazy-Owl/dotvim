@@ -60,7 +60,7 @@ set shiftwidth=4
 set autoindent smartindent
 set softtabstop=4
 "set smarttab
-"set expandtab
+set expandtab
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -230,8 +230,6 @@ func! GitGrepWord()
 endf
 nmap <C-x>G :call GitGrepWord()<CR>
 "let g:khuno_ignore="W191,E501,E303,E123,E241,E121,E122,E221,E242,E128,E225"
-
-
 
 
 
