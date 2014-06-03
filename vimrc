@@ -7,7 +7,7 @@ let vimfiles_dir=expand("$HOME/.vim/")
 
 filetype on
 if filereadable(vimfiles_dir."autoload/pathogen.vim")
-    "call pathogen#helptags()
+    call pathogen#helptags()
     call pathogen#runtime_append_all_bundles()
     call pathogen#infect()
 endif
@@ -48,8 +48,8 @@ set number
 "let g:solarized_degrade=0
 syntax enable
 set hlsearch
-"set background=dark
-colorscheme visualstudio
+set background=dark
+colorscheme molokai
 
 set listchars=tab:»\ ,trail:·,eol:¶
 
@@ -275,6 +275,11 @@ au FileType text set wrap
 
 map <LocalLeader>cs :%s/\s\+$//e<CR>
 
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+
 " plugin settings
 
 " pyflakes
@@ -332,7 +337,19 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)"
 
 " syntastic python
-let g:syntastic_python_checkers=['flake8', 'python']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E211,E261,E501,E302,E251,E262,E221,E265,E128,F403,E124'
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs=1
+
+" vim-clojure-static settings
+let g:clojure_fuzzy_indent = 1
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let']
+let g:clojure_fuzzy_indent_blacklist = ['-fn$', '\v^with-%(meta|out-str|loading-context)$']
+let g:clojure_align_multiline_strings = 1 " align multiline strings
+
+" rainbow parentheses settings
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
