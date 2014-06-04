@@ -49,7 +49,11 @@ set number
 syntax enable
 set hlsearch
 set background=dark
-colorscheme molokai
+if has('gui_running')
+    colorscheme molokai
+else
+    colorscheme evening
+endif
 
 set listchars=tab:»\ ,trail:·,eol:¶
 
@@ -133,6 +137,8 @@ filetype plugin on
 filetype indent on
 " Если сохраняемый файл является файлом скрипта - сделать его исполняемым
 au BufWritePost * if getline(1) =~ "^#!.*/bin/.*sh"|silent !chmod a+x %|endif
+
+set wildignore+=*.pyc,*.o
 
 "" Переключение кодировок файла
 set wildmenu
@@ -338,7 +344,7 @@ map <Leader>k <Plug>(easymotion-k)"
 
 " syntastic python
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E211,E261,E501,E302,E251,E262,E221,E265,E128,F403,E124'
+let g:syntastic_python_flake8_args='--ignore=E211,E261,E501,E302,E251,E262,E221,E265,E128,F403,E124,E241'
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs=1
 
