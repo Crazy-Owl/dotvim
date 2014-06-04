@@ -30,7 +30,7 @@ set formatoptions=croql
 set cinoptions=l1,g0,p0,t0,c0,(s,U1,m1
 
 " save all at focus lost
-au FocusLost * :wa
+au FocusLost * silent! wa
 
 set backup      " keep a backup file
 set backupdir=$HOME/.vimbackup
