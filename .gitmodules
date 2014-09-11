@@ -47,3 +47,6 @@
 [submodule "bundle/vim-classpath"]
 	path = bundle/vim-classpath
 	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/rust-vim"]
+	path = bundle/rust-vim
+	url = https://github.com/wting/rust.vim.git
