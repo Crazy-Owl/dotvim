@@ -204,18 +204,18 @@ if version >= 700
     nmap X :tabnext<cr>
 endif
 
-"" хранить swap-файлы будем в одном месте, чтобы не мешались
-"let swap_dir='/home/owl/.swapfiles'
-"
-"if !isdirectory(swap_dir) && exists('*mkdir')
-"    call mkdir(swap_dir)
-"endif
-"
-"if isdirectory(swap_dir)
-"    let &directory=swap_dir.'/'
-"endif
+" хранить swap-файлы будем в одном месте, чтобы не мешались
+let swap_dir='/home/owl/.swapfiles/'
 
-set noswapfile
+if !isdirectory(swap_dir) && exists('*mkdir')
+    call mkdir(swap_dir)
+endif
+
+if isdirectory(swap_dir)
+    let &directory=swap_dir.'/'
+endif
+
+"set noswapfile
 
 "highlight SpellBad  ctermbg=blue
 
